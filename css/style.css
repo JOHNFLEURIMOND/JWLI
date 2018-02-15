@@ -1,0 +1,505 @@
+/*
+Project Name:JWLI
+Client: Leon Noel
+Author: John Fleurimond
+Developer from Resilient Coders. Can't Stop. Won't stop
+*/
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+
+* {
+  -moz-box-sizing: border-box;
+  /* Firexfox */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box;
+  /* IE */
+}
+
+/* Clear fix hack */
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px;
+  /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0;
+  /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  color: #000;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: 'Open Sans', HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+
+#container {
+  max-width: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.hero>p {
+  position: relative;
+  left: 28em;
+  bottom: 10em;
+}
+
+#story>p, #story>h2 {
+  position: relative;
+  top: 4em;
+  left: 3em;
+}
+
+#aboutme p {
+  position: relative;
+  top: 2em;
+  right: 4em;
+}
+
+#fish img {
+  position: relative;
+  left: 11em;
+}
+
+header {
+  max-width: 100%;
+  height: 50px;
+  width: 100%;
+  clear: both;
+  color: black;
+}
+
+img .jwlisub {
+  position: relative;
+  left: 5em;
+}
+
+footer {
+  max-width: 100%;
+  height: 200px;
+  width: 100%;
+  clear: both;
+  background: black;
+  color: white;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px hidden black;
+}
+
+nav li {
+  float: left;
+  width: 14.281%;
+  position: relative;
+}
+
+a:hover {
+  color: rgb(243, 115, 123);
+}
+
+nav li a {
+  background: white;
+  color: black;
+  display: block;
+  padding: .75em 1em;
+  text-decoration: none;
+  *
+}
+
+nav li {
+  list-style: none;
+}
+
+.button {
+  padding: 8px 16px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 0.375em;
+  background: grey;
+  color: white;
+}
+
+.button:hover {
+  background: rgb(243, 115, 123);
+}
+
+.jwlisub {
+  max-width: 100%;
+  width: 100%;
+  height: 35em;
+  background: rgb(203, 205, 203);
+}
+
+.hero {
+  float: left;
+  width: 60%;
+  height: 25em;
+}
+
+#womenPic {
+  float: left;
+  width: 30%;
+  height: 25em;
+  margin-top: 0.625em;
+  position: relative;
+  left: 20em;
+}
+
+.description {
+  width: 100%;
+  font-family: 'lato';
+  height: 25em;
+  margin-top: 3.125em;
+}
+
+#tdescription {
+  width: 100%;
+  height: 33%;
+  text-align: center;
+  float: left;
+}
+
+#dcenter {
+  width: 50%;
+  height: 33%;
+  float: left;
+  text-align: center;
+}
+
+#fcenter {
+  width: 50%;
+  height: 33%;
+  float: left;
+  text-align: center;
+}
+
+#bdescription {
+  width: 100%;
+  height: 33%;
+  text-align: center;
+}
+
+#db {
+  font-weight: 200;
+}
+
+.history {
+  width: 100%;
+  height: 31.25em;
+  max-width: 100%;
+  background: rgb(203, 205, 203);
+}
+
+p {
+  text-align: center;
+}
+
+#story {
+  width: 50%;
+  height: 31.25em;
+  float: left;
+  padding: 0 0 0.625em 1.875em;
+}
+
+#picstory {
+  float: left;
+  width: 30%;
+  height: 31.25;
+  padding: 1.875em 0 0px 4.375em;
+  left: 2em;
+  position: relative;
+}
+
+.founder {
+  width: 100%;
+  height: 31.25em;
+  max-width: 100%;
+}
+
+#fish {
+  width: 40%;
+  height: 31.25em;
+  padding: 2.5em 0 0.625em 1.875em;
+  float: left;
+}
+
+#aboutme {
+  width: 60%;
+  height: 31.25em;
+  padding: 0.625em 0 0 3.75em;
+  float: left;
+}
+
+.accomplishments {
+  width: 100%;
+  height: 500px;
+  max-width: 100%;
+}
+
+#fish2 {
+  width: 40%;
+  height: 500px;
+  padding: 2.5em 0 0.625em 1.875em;
+  float: left;
+  text-align: center;
+}
+
+#simmons {
+  width: 60%;
+  height: 500px;
+  padding: 0.625em 0 0 3.75em;
+  float: left;
+  text-align: center;
+}
+
+@media only screen and (max-width: 480) {
+  #container {
+    background: green;
+  }
+  .hero {
+    width: 100%;
+    height: 400px;
+    float: left;
+  }
+  #womenPic {
+    width: 100%;
+    float: left;
+  }
+  .description {
+    width: 100%;
+    height: 500px;
+    float: left;
+  }
+  #tdescription {
+    width: 100%;
+    height: 250px;
+    font-size: .82em;
+    float: left;
+  }
+  #dcenter {
+    width: 50%;
+    height: 500px;
+    float: left;
+  }
+  #fcenter {
+    width: 50%;
+    height: 500px;
+    float: left;
+  }
+  #bdescription, #tdescription {
+    width: 100%;
+    height: 250px;
+    font-size: .82em;
+    float: left;
+  }
+  .history {
+    width: 100%;
+    height: 500px;
+    font-size: .82em;
+    float: left;
+  }
+  #story {
+    width: 100%;
+    height: 500px;
+    float: left;
+    font-size: .87em;
+  }
+  #picstory {
+    display: none;
+    position: relative;
+    right: 20em;
+  }
+  .founder {
+    width: 100%;
+    height: 500px;
+    max-width: 960px;
+    font-size: .82em;
+  }
+  #fish {
+    width: 100%;
+    height: 500px;
+    float: left;
+  }
+  #aboutme {
+    width: 100%;
+    height: 500px;
+    float: left;
+  }
+  .accomplishments {
+    width: 100%;
+    height: 500px;
+    max-width: 960px;
+  }
+  #fish2 {
+    width: 100%;
+    height: 500px;
+    font-size: .82em;
+    float: left;
+  }
+  #simmons {
+    display: none;
+  }
+  header, footer {
+    height: 100px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 760px) {
+  body {
+    background: yellow;
+  }
+  .jwlisub {
+    max-width: 100%;
+    width: 100%;
+    background: rgb(203, 205, 203);
+  }
+  .hero {
+    float: left;
+    width: 50%;
+  }
+  #womenPic {
+    float: left;
+    width: 40%;
+  }
+  .description {
+    max-width: 100% width: 100%;
+    font-family: 'lato';
+    margin-top: 5em;
+  }
+  #tdescription {
+    width: 100%;
+    text-align: center;
+    float: left;
+  }
+  #dcenter {
+    width: 50%;
+    height: 33%;
+    float: left;
+    text-align: center;
+  }
+  #fcenter {
+    width: 50%;
+    float: left;
+    text-align: center;
+  }
+  #founder img {
+    position: relative;
+    top: 2em;
+    left: 20em;
+  }
+  #bdescription {
+    width: 100%;
+    text-align: center;
+  }
+  #db {
+    font-weight: 200;
+  }
+  .history {
+    width: 100%;
+    max-width: 960px;
+    background: rgb(203, 205, 203);
+    font-size: .82em;
+  }
+  p {
+    text-align: center;
+  }
+  #story {
+    width: 50%;
+    float: left;
+    padding: 0 0 10px 30px;
+  }
+  #picstory {
+    float: left;
+    width: 30%;
+    padding: 30px 0 0px 70px;
+  }
+  .founder {
+    width: 100%;
+    max-width: 960px;
+    font-size: .82em;
+    ;
+  }
+  #fish {
+    width: 100%;
+    padding: 40px 0 10px 30px;
+    float: left;
+    text-align: center;
+  }
+  #aboutme {
+    width: 100%;
+    padding: 10px 0 0px 80px;
+    float: left;
+    font-size: 1em;
+  }
+  .accomplishments {
+    width: 100%;
+    max-width: 100%;
+  }
+  #fish2 {
+    width: 40%;
+    padding: 40px 0 10px 30px;
+    float: left;
+    text-align: center;
+  }
+  #simmons {
+    width: 60%;
+    padding: 10px 0 0px 60px;
+    float: left;
+    text-align: center;
+  }
+}
+
+@media (min-width: 737px) and (max-width: 980px) {
+  header, footer {
+    height: 100px;
+    width: 100%;
+  }
+  body {
+    background: blue;
+  }
+  @media (min-width: 981px) and (max-width: 1354px) {
+    body {
+      background: red;
+    }
+  }
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
